@@ -410,7 +410,7 @@ impl HTMLImageElement {
     pub fn areas(&self) -> Option<Vec<Root<HTMLAreaElement>>> {
         let elem = self.upcast::<Element>();
 
-        if usemap_att = match elem.has_attribute(&LocalName::from("usemap")) {
+        if usemap_attr = match elem.has_attribute(&LocalName::from("usemap")) {
             true => elem.get_string_attribute(&local_name!("usemap")),
             _ => return None
         };
